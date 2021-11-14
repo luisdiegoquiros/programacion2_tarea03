@@ -1,5 +1,6 @@
 #include "persona.h"
 #include <cstring>
+#include <iostream>
 
 Persona::Persona(int id, std::string nombre, std::string apellido, std::string correo) {
     this->id = id;
@@ -14,4 +15,10 @@ Persona::Persona() {
     strcpy(this->nombre, "");
     strcpy(this->apellido, "");
     strcpy(this->correo, "");
+}
+
+void Persona::getInformaciónPersona(){
+
+   std::cout << id << "--->" << nombre   << " " << apellido << " " << correo << " " << std::endl;
+
 }

@@ -13,6 +13,8 @@ class Persona
     public:
     Persona(int id, std::string nombre, std::string apellido, std::string correo);
     Persona();
+
+    void getInformaciónPersona();
 };
 
 
