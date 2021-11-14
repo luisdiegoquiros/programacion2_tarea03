@@ -1,5 +1,5 @@
 # Programacion 2 
-# Tarea03
+# Tarea03 Escritor de Archivo Binario
 
 ## Estudiante: Luis Diego Quirós Gómez
 
