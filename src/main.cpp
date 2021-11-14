@@ -2,9 +2,11 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 #include "persona.h"
 #include "lectorPersonasTexto.h"
+#include "escritorPersonas.h"
 
 #include "excepciones/excepcionNoSePuedeAbrirArchivo.h"
 
@@ -15,6 +17,7 @@ int main()
 
     std::vector<Persona> personasLeidas;
 
+    //Código para leer las personas en la variable personasLeidas
     try
     {
         //Se intenta abrir el archivo
@@ -32,12 +35,27 @@ int main()
         return -1;
     }
 
-
-
-    
     for (Persona persona : personasLeidas)
     {
         persona.getInformaciónPersona();
+    }
+
+    //Código para escribir las personasLeidas en el archivo binario.
+    try
+    {
+        //Se intenta abrir el archivo
+        EscritorPersonas archivoSalida{"C:\\Users\\luis2\\Desktop\\personas.dat"};
+
+        //Se agregan las personas al archivo binario
+        archivoSalida.agregarVariasPersonas(personasLeidas);
+
+        //Se cierra el archivo
+        archivoSalida.cerrar();
+    }
+    catch (const ExcepcionNoSePuedeAbrirArchivo &excepcion)
+    {
+        std::cerr << "Error leyendo el archivo. " << excepcion.what() << '\n';
+        return -1;
     }
 
     return 0;
