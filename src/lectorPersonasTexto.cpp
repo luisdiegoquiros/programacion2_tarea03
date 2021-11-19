@@ -13,7 +13,7 @@ LectorPersonasTexto::LectorPersonasTexto(std::string nombreArchivo)
 
     if (!archivoEntrada.is_open())
     {
-        throw new ExcepcionNoSePuedeAbrirArchivo();
+        throw ExcepcionNoSePuedeAbrirArchivo();
     }
 }
 
@@ -52,7 +52,9 @@ std::vector<Persona> LectorPersonasTexto::cargarPersonas()
     return personasLeidas;
 }
 
-void LectorPersonasTexto::cerrar()
+bool LectorPersonasTexto::cerrar()
 {
     archivoEntrada.close();
+
+    return !archivoEntrada.is_open();
 }
