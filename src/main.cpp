@@ -29,7 +29,7 @@ int main()
         //Se cierra el archivo
         archivoEntrada.cerrar();
     }
-    catch (const ExcepcionNoSePuedeAbrirArchivo &excepcion)
+    catch (const ExcepcionNoSePuedeAbrirArchivo excepcion)
     {
         std::cerr << "Error leyendo el archivo. " << excepcion.what() << '\n';
         return -1;
@@ -52,7 +52,7 @@ int main()
         //Se cierra el archivo
         archivoSalida.cerrar();
     }
-    catch (const ExcepcionNoSePuedeAbrirArchivo &excepcion)
+    catch (const ExcepcionNoSePuedeAbrirArchivo excepcion)
     {
         std::cerr << "Error leyendo el archivo. " << excepcion.what() << '\n';
         return -1;
