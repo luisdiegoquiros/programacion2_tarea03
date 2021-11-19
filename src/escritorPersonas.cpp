@@ -8,7 +8,7 @@ EscritorPersonas::EscritorPersonas(std::string nombreArchivo)
 
     if (!archivoSalida.is_open())
     {
-        throw new ExcepcionNoSePuedeAbrirArchivo();
+        throw ExcepcionNoSePuedeAbrirArchivo();
     }
 }
 
@@ -25,7 +25,9 @@ void EscritorPersonas::agregarVariasPersonas(std::vector<Persona> &vectorPersona
     }
 }
 
-void EscritorPersonas::cerrar()
+bool EscritorPersonas::cerrar()
 {
     archivoSalida.close();
+
+    return !archivoSalida.is_open();
 }

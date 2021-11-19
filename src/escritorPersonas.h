@@ -17,7 +17,7 @@ class EscritorPersonas {
     
     void agregarPersona(Persona &persona);
     void agregarVariasPersonas(std::vector<Persona> &vectorPersonas);
-    void cerrar();
+    bool cerrar();
 
 };
 
