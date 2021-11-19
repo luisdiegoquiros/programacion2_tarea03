@@ -5,10 +5,7 @@
             "type": "shell",
             "command": "g++.exe -std=c++17 -g src/*.cpp test/*.cpp -lgtest -lgtest_main -DUNIT_TEST -o obj/tests.exe",
             "group": "build",
-            "problemMatcher": [],
-            "options": {
-                "cwd": "${fileDirname}" //"C:/msys64/mingw64/bin"
-            }
+            "problemMatcher": []
         },
         {
             "type": "cppbuild",
