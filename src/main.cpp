@@ -37,7 +37,10 @@ int main()
 
     for (Persona persona : personasLeidas)
     {
-        persona.getInformaciónPersona();
+        std::cout << persona.obtenerId() << " :: ";
+        std::cout << persona.obtenerNombre() << " :: ";
+        std::cout << persona.obtenerApellido() << " :: ";
+        std::cout << persona.obtenerCorreo() << std::endl;
     }
 
     //Código para escribir las personasLeidas en el archivo binario.
