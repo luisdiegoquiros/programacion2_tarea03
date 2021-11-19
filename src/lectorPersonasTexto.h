@@ -14,7 +14,7 @@ class LectorPersonasTexto {
     public:
     LectorPersonasTexto(std::string nombreArchivo);
     std::vector<Persona> cargarPersonas();
-    void Cerrar();
+    void cerrar();
 };
 
 #endif

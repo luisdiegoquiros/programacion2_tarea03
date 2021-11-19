@@ -21,13 +21,13 @@ int main()
     try
     {
         //Se intenta abrir el archivo
-        LectorPersonasTexto archivoEntrada{"C:\\personas.txt"};
+        LectorPersonasTexto archivoEntrada{"personas.txt"};
 
         //Se carga el archivo de texto donde están las personas
         personasLeidas = archivoEntrada.cargarPersonas();
 
         //Se cierra el archivo
-        archivoEntrada.Cerrar();
+        archivoEntrada.cerrar();
     }
     catch (const ExcepcionNoSePuedeAbrirArchivo &excepcion)
     {
@@ -44,7 +44,7 @@ int main()
     try
     {
         //Se intenta abrir el archivo
-        EscritorPersonas archivoSalida{"C:\\Users\\luis2\\Desktop\\personas.dat"};
+        EscritorPersonas archivoSalida{"personas.dat"};
 
         //Se agregan las personas al archivo binario
         archivoSalida.agregarVariasPersonas(personasLeidas);

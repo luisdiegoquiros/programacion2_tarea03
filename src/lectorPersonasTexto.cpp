@@ -52,7 +52,7 @@ std::vector<Persona> LectorPersonasTexto::cargarPersonas()
     return personasLeidas;
 }
 
-void LectorPersonasTexto::Cerrar()
+void LectorPersonasTexto::cerrar()
 {
     archivoEntrada.close();
 }
