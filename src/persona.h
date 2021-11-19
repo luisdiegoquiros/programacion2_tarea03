@@ -15,6 +15,11 @@ class Persona
     Persona();
 
     void getInformaciónPersona();
+
+    int obtenerId();
+    std::string obtenerNombre();
+    std::string obtenerApellido();
+    std::string obtenerCorreo();
 };
 
 
