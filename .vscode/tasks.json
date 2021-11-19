@@ -5,7 +5,10 @@
             "type": "shell",
             "command": "g++.exe -std=c++17 -g src/*.cpp test/*.cpp -lgtest -lgtest_main -DUNIT_TEST -o obj/tests.exe",
             "group": "build",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}" //"C:/msys64/mingw64/bin"
+            }
         },
         {
             "type": "cppbuild",
@@ -19,7 +22,7 @@
                 "${workspaceFolder}/obj/${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "C:/msys64/mingw64/bin"
+                "cwd": "${fileDirname}" //"C:/msys64/mingw64/bin"
             },
             "problemMatcher": [
                 "$gcc"
