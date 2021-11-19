@@ -14,8 +14,6 @@ class Persona
     Persona(int id, std::string nombre, std::string apellido, std::string correo);
     Persona();
 
-    void getInformaciónPersona();
-
     int obtenerId();
     std::string obtenerNombre();
     std::string obtenerApellido();

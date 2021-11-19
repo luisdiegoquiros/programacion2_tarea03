@@ -19,12 +19,6 @@ Persona::Persona()
     strcpy(this->correo, "");
 }
 
-void Persona::getInformaciónPersona()
-{
-
-    std::cout << id << "--->" << nombre << " " << apellido << " " << correo << " " << std::endl;
-}
-
 int Persona::obtenerId()
 {
     return this->id;
