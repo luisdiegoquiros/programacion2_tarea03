@@ -35,6 +35,7 @@ int main()
         return -1;
     }
 
+    //Impresión de las personas leídas
     for (Persona persona : personasLeidas)
     {
         std::cout << persona.obtenerId() << " :: ";
